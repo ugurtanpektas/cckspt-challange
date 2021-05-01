@@ -22,6 +22,7 @@
         border:1px solid #555;
         border-radius: 10px;
         margin-bottom: 20px;
+        font-weight: 600;
         &.active{
             border:none !important;
             background-color: $base-color;
