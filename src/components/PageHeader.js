@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../assets/scss/pageHeader.scss';
+
 class PageHeader extends React.Component{
 
     componentDidMount(){
@@ -8,11 +10,17 @@ class PageHeader extends React.Component{
 
     render(){
        return (
-            <div className="row page-header-container">
-                <div className="col-12">
-                    Page Header
+                
+        <div className="page-header-container">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h1>Çiçeksepeti H1</h1>
+                    </div>
                 </div>
             </div>
+        </div>
+                        
         )
     }
 }

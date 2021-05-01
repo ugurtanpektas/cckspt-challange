@@ -1,0 +1,26 @@
+@import 'variables';
+
+.breadcrumb-container{
+    font-size: 13px;
+    color: #555555;
+    margin: 10px 0;
+    a{
+        color: #555555;
+        &:hover{
+            color: #333;
+            text-decoration: none;
+        }   
+    }
+    .arrow{
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid #555;
+        border-bottom:1px solid #555;
+        transform: rotate(-45deg);
+        margin:0 10px;
+    }
+    .active-breadcrumb{
+        color: $base-green;
+    }
+}

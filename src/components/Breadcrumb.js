@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../assets/scss/breadcrumb.scss';
+
 class Breadcrumb extends React.Component{
 
     componentDidMount(){
@@ -8,11 +10,18 @@ class Breadcrumb extends React.Component{
 
     render(){
        return (
-            <div className="row breadcrumb-container">
-                <div className="col-12">
-                    Breadcrumb
+           <div className="container">
+                <div className="row breadcrumb-container">
+                    <div className="col-12">
+                        <a href="#">Çiçeksepeti</a> 
+                        <span className="arrow"></span>
+                        <a href="#">Market</a>
+                        <span className="arrow"></span>
+                        <span className="active-breadcrumb">ÇiçeksepetiBreadcrumb</span>
+                        
+                    </div>
                 </div>
-            </div>
+           </div> 
         )
     }
 }
