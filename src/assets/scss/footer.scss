@@ -1,0 +1,118 @@
+@import 'variables';
+.footer-container{
+    background-color: #F2F2F2;
+    padding-top: 150px;
+    .download-app-container{
+        width: 100%;
+        min-height: 220px;
+        border-radius: 111px;
+        background-color: #fff;
+        position: relative;
+        margin-bottom: 110px;
+        .footer-phone-container{
+            min-height: 220px;
+        }
+        .footer-phones{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .download-right-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 220px;
+            .qr-container{
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                margin-bottom: 20px;
+                .qr-image{
+                    margin-right: 20px;
+                }
+                .qr-download-bold{
+                    font-weight: 700;
+                }
+            }
+            .download-container{
+                img{
+                    margin-right: 10px;
+                }
+            }
+        }
+
+    }
+    .footer-menu-container{
+        .footer-menu-left{
+            border-right: 2px dotted #9B9B9B;
+            padding-right: 100px;
+            .footer-social-icons{
+                img{
+                    margin-right: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+            .personal-data-info{
+                font-size: 15px;
+                color: #000;
+                line-height: 22px;
+                a{
+                    text-decoration: underline;
+                    color: #000;
+                }
+            }
+        }
+        .footer-menu{
+            text-align: center;
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    margin-bottom: 5px;
+                    &.menu-header{
+                        color: $base-color;
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                    }
+                    a{
+                        font-size: 15px;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom-text{
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+        margin-top:100px;
+        margin-bottom: 50px;
+    }
+    .copyright-container{
+        font-size: 13px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        background-color: #E6E6E6;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .footer-container{
+        .download-app-container{
+            .footer-phones{
+                left: calc(50% - 176px);
+            }
+            .download-right-container{
+                align-items: center;
+            }
+        }
+        .footer-menu-left{
+            border-right:none !important;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-right: 0 !important;
+        }
+    }
+}

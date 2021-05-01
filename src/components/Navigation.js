@@ -3,7 +3,6 @@ import React from "react";
 import logo from '../assets/img/logo.svg';
 import cartIcon from '../assets/img/cart-icon.svg';
 import lightingIcon from '../assets/img/lighting-icon.svg';
-import searchIcon from '../assets/img/search-icon.svg';
 
 import '../assets/scss/navigation.scss';
 
@@ -28,6 +27,13 @@ class Navigation extends React.Component{
                             </div>
                             <div className="cart-container">
                                 <button className="cart-button"><img src={cartIcon} alt="Sepet" title="Sepetim"/> Sepetim</button>
+                                <div className="cart-count-badge">2</div>
+                                <div className="free-cargo-popover">
+                                    <img src={lightingIcon} alt="lighting" /> <span className="yellow-text">50 TL</span> ürün daha ekleyin kargo bedava
+                                    <div className="proggress-container">
+                                        <div className="proggress"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
