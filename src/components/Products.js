@@ -126,7 +126,7 @@ class Products extends React.Component{
                                         {product.isFreeCargo && 
                                             <div className="free-cargo">Ücretsiz Teslimat</div>
                                         }
-                                        <div className="price">{product.price} TL</div>
+                                        <div className="price">{product.price.toFixed(2)} TL</div>
                                         <div className="add-to-cart">
                                         {this.props.cartState.cartItems.some((item) => item.id === product.id) ?
                                             <div className="product-count">
