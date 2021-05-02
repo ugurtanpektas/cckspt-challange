@@ -52,12 +52,18 @@ class Navigation extends React.Component{
                             </div>
                             <div className="cart-container">
                                 <button className="cart-button"><img src={cartIcon} alt="Sepet" title="Sepetim"/> Sepetim</button>
-                                <div className="cart-count-badge">2</div>
-                                <div className="free-cargo-popover">
-                                    <img src={lightingIcon} alt="lighting" /> <span className="yellow-text">50 TL</span> ürün daha ekleyin kargo bedava
-                                    <div className="proggress-container">
-                                        <div className="proggress"></div>
-                                    </div>
+                                <div className={`cart-count-badge ${this.props.cartState.cartItemsCount > 0 ? "show" : ""}`}>{this.props.cartState.cartItemsCount}</div>
+                                <div className={`free-cargo-popover ${this.props.cartState.showFreeCargo ? "show" : ""}`}>
+                                    {this.props.cartState.totalPrice < 500 ? 
+                                        <div>
+                                            <img src={lightingIcon} alt="lighting" /> <span className="yellow-text">{(500 - this.props.cartState.totalPrice).toFixed(2)} TL</span> ürün daha ekleyin kargo bedava
+                                            <div className="proggress-container">
+                                                <div className="proggress" style={{width:((this.props.cartState.totalPrice / 500) * 100)+'%'}}></div>
+                                            </div>
+                                        </div>
+                                    :
+                                        <div>Kargo Bedava</div>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -70,7 +76,8 @@ class Navigation extends React.Component{
 
 function mapStateToProps(state){
     return{
-        productState: state.products
+        productState: state.products,
+        cartState: state.cart
     }
 }
 

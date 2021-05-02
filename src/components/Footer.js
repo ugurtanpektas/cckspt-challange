@@ -61,24 +61,24 @@ class Footer extends React.Component{
                                             <img src={logo} alt="Çiçeksepeti Logo" />
                                         </div>
                                         <div className="footer-social-icons mb-4">
-                                            <a href="">
+                                            <a href="/#">
                                                 <img src={facebookLogo} alt="Facebook Logo" />
                                             </a>
-                                            <a href="">
+                                            <a href="/#">
                                                 <img src={twitterLogo} alt="Twitter Logo" />
                                             </a>
-                                            <a href="">
+                                            <a href="/#">
                                                 <img src={instagramLogo} alt="Instagram Logo" />
                                             </a>
-                                            <a href="">
+                                            <a href="/#">
                                                 <img src={youtubeLogo} alt="Youtube Logo" />
                                             </a>
-                                            <a href="">
+                                            <a href="/#">
                                                 <img src={penLogo} alt="Pen Logo" />
                                             </a>
                                         </div>
                                         <div className="personal-data-info mb-4">
-                                            CicekSepeti.com olarak kişisel verilerinizin gizliliğini önemsiyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında oluşturduğumuz aydınlatma metnine <a href="">buradan</a> ulaşabilirsiniz.
+                                            CicekSepeti.com olarak kişisel verilerinizin gizliliğini önemsiyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında oluşturduğumuz aydınlatma metnine <a href="/#">buradan</a> ulaşabilirsiniz.
                                         </div>
                                     </div>
                                     <div className="col-lg-8 col-md-12 col-sm-12">
@@ -87,13 +87,13 @@ class Footer extends React.Component{
                                                 <div className="footer-menu">
                                                     <ul>
                                                         <li className="menu-header">Faydalı Bilgiler</li>
-                                                        <li><a href="">Çiçek Bakımı</a></li>
-                                                        <li><a href="">Çiçek Eşliğinde Notlar</a></li>
-                                                        <li><a href="">Çiçek Anlamları</a></li>
-                                                        <li><a href="">Özel Günler</a></li>
-                                                        <li><a href="">Mevsimlere Göre Çiçekler</a></li>
-                                                        <li><a href="">BonnyFood Saklama Koşulları</a></li>
-                                                        <li><a href="">Site Haritası</a></li>
+                                                        <li><a href="/#">Çiçek Bakımı</a></li>
+                                                        <li><a href="/#">Çiçek Eşliğinde Notlar</a></li>
+                                                        <li><a href="/#">Çiçek Anlamları</a></li>
+                                                        <li><a href="/#">Özel Günler</a></li>
+                                                        <li><a href="/#">Mevsimlere Göre Çiçekler</a></li>
+                                                        <li><a href="/#">BonnyFood Saklama Koşulları</a></li>
+                                                        <li><a href="/#">Site Haritası</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -101,11 +101,11 @@ class Footer extends React.Component{
                                                 <div className="footer-menu">
                                                     <ul>
                                                         <li className="menu-header">Kurumsal</li>
-                                                        <li><a href="">Çiçek Bakımı</a></li>
-                                                        <li><a href="">Çiçek Eşliğinde Notlar</a></li>
-                                                        <li><a href="">Mevsimlere Göre Çiçekler</a></li>
-                                                        <li><a href="">BonnyFood Saklama Koşulları</a></li>
-                                                        <li><a href="">Site Haritası</a></li>
+                                                        <li><a href="/#">Çiçek Bakımı</a></li>
+                                                        <li><a href="/#">Çiçek Eşliğinde Notlar</a></li>
+                                                        <li><a href="/#">Mevsimlere Göre Çiçekler</a></li>
+                                                        <li><a href="/#">BonnyFood Saklama Koşulları</a></li>
+                                                        <li><a href="/#">Site Haritası</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -113,8 +113,8 @@ class Footer extends React.Component{
                                                 <div className="footer-menu">
                                                     <ul>
                                                         <li className="menu-header">İletişim</li>
-                                                        <li><a href="">Bize Ulaşın</a></li>
-                                                        <li><a href="">Sıkça Sorulan Sorular</a></li>
+                                                        <li><a href="/#">Bize Ulaşın</a></li>
+                                                        <li><a href="/#">Sıkça Sorulan Sorular</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -122,10 +122,10 @@ class Footer extends React.Component{
                                                 <div className="footer-menu">
                                                     <ul>
                                                         <li className="menu-header">Gizlilik Sözleşmesi</li>
-                                                        <li><a href="">Çiçek Bakımı</a></li>
-                                                        <li><a href="">Çiçek Eşliğinde Notlar</a></li>
-                                                        <li><a href="">Çiçek Anlamları</a></li>
-                                                        <li><a href="">Özel Günler</a></li>
+                                                        <li><a href="/#">Çiçek Bakımı</a></li>
+                                                        <li><a href="/#">Çiçek Eşliğinde Notlar</a></li>
+                                                        <li><a href="/#">Çiçek Anlamları</a></li>
+                                                        <li><a href="/#">Özel Günler</a></li>
                                                     </ul>
                                                 </div>
                                             </div>

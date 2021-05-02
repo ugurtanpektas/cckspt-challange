@@ -80,9 +80,11 @@
                 font-weight: 600;
                 z-index: 10;
                 visibility: hidden;
-                transition: ease-in all 1s;
+                opacity: 0;
+                transition: ease-in all 0.2s;
                 &.show{
                     visibility: visible;
+                    opacity: 1;
                 }
                 &::before{
                     content:"";

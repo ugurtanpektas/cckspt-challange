@@ -70,6 +70,25 @@
                     height: 40px;
                 }
             }
+            .product-count{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border:1px solid #E2E7E9;
+                border-radius: 25px;
+                padding: 3px;
+                font-size: 22px;
+                font-weight: 700;
+                color: #555555;
+                height: 40px;
+                button{
+                    width: 20%;
+                    display: inline-block;
+                    color: $base-color;
+                    background-color: #E8F1FF;
+                    height: 100%;
+                }
+            }
         }
     }
 }

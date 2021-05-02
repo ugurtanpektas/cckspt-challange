@@ -17,14 +17,14 @@ class Filter extends React.Component{
     setFilter = (filterId) => {
         this.props.filterAction('SET_ACTIVE_FILTER', filterId);
         this.props.productAction('LOADING');
-        if(filterId == 0){
+        if(filterId === 0){
             this.props.productAction('SET_FILTERED_PRODUCTS', this.props.productState.dummyProducts);
             this.props.productAction('SET_LISTING_PRODUCTS', this.props.productState.dummyProducts);
         }
         else{
             let filteredProducts = this.props.productState.dummyProducts;
-            filteredProducts = filteredProducts.filter((product) => product.category == filterId);
-            console.log('filteredProducts : ', filteredProducts);
+            filteredProducts = filteredProducts.filter((product) => product.category === filterId);
+            // console.log('filteredProducts : ', filteredProducts);
             this.props.productAction('SET_FILTERED_PRODUCTS', filteredProducts);
             this.props.productAction('SET_LISTING_PRODUCTS', filteredProducts);
         }
@@ -40,13 +40,13 @@ class Filter extends React.Component{
                 </div>
                 <div className="row">
                     <div className="col-lg-2">
-                        <a href="#" onClick={() => this.setFilter(0)} className={`filter-item ${this.props.filterState.activeFilter == 0 ? "active" : ""}`}>Tüm Kategoriler</a>
+                        <a href="/#" onClick={() => this.setFilter(0)} className={`filter-item ${this.props.filterState.activeFilter === 0 ? "active" : ""}`}>Tüm Kategoriler</a>
                     </div>
 
                     {this.props.filterState.dummyFilters.map((filter) => {
                         return(
-                        <div className="col-lg-2">
-                            <a href="#" onClick={() => this.setFilter(filter.id)} className={`filter-item ${this.props.filterState.activeFilter == filter.id ? "active" : ""}`}>{filter.name}</a>
+                        <div className="col-lg-2" key={filter.id}>
+                            <a href="/#" onClick={() => this.setFilter(filter.id)} className={`filter-item ${this.props.filterState.activeFilter === filter.id ? "active" : ""}`}>{filter.name}</a>
                         </div>
                         )
                     })}
