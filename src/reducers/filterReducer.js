@@ -22,6 +22,7 @@ const initialState = {
         },
     ],
     activeFilter:0,
+    mobileToggle:false,
     loading:true
 };
 
@@ -31,6 +32,8 @@ export default function filterReducer(state = initialState, action){
             return {...state, loading:true};
         case 'SET_ACTIVE_FILTER':
             return {...state, loading:false, activeFilter:action.payload};
+        case 'TOGGLE_MOBILE_FILTER':
+            return {...state, loading:false, mobileToggle:!state.mobileToggle};
         default:
             return state;
     }

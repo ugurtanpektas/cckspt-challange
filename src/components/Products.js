@@ -123,7 +123,9 @@ class Products extends React.Component{
                                         </div>
                                     </div>
                                     <div className="product-bottom">
-                                        <div className="free-cargo">Ücretsiz Teslimat</div>
+                                        {product.isFreeCargo && 
+                                            <div className="free-cargo">Ücretsiz Teslimat</div>
+                                        }
                                         <div className="price">{product.price} TL</div>
                                         <div className="add-to-cart">
                                         {this.props.cartState.cartItems.some((item) => item.id === product.id) ?

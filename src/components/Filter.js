@@ -30,15 +30,19 @@ class Filter extends React.Component{
         }
     }
 
+    toggleMobileFilter = () => {
+        this.props.filterAction('TOGGLE_MOBILE_FILTER');
+    }
+
     render(){
        return (
            <div className="container filter-container">
                <div className="row">
                     <div className="col-12">
-                        <h2><img src={categoryIcon} alt="Kategoriler" /> Kategoriler</h2>
+                        <h2 onClick={this.toggleMobileFilter}><img src={categoryIcon} alt="Kategoriler" /> Kategoriler <span className={`filter-mobile-toggle ${this.props.filterState.mobileToggle ? "opened" : ""}`}></span></h2>
                     </div>
                 </div>
-                <div className="row">
+                <div className={`row filter-items ${this.props.filterState.mobileToggle ? "opened" : ""}`}>
                     <div className="col-lg-2">
                         <a href="/#" onClick={() => this.setFilter(0)} className={`filter-item ${this.props.filterState.activeFilter === 0 ? "active" : ""}`}>Tüm Kategoriler</a>
                     </div>
