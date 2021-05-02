@@ -25,7 +25,7 @@ class Banner extends React.Component{
                                 <div className="banner-content">
                                     <div>75 TL Üzerine Teslimat Ücreti Bizden</div>
                                     <div>
-                                        <a href="javascript:;" className="detail-button">Detaylı Bilgi</a>
+                                        <a href="" className="detail-button">Detaylı Bilgi</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ class Banner extends React.Component{
                                 <div className="banner-content">
                                     <div>Hediye Kategorisi için Sepette %15 İndirim</div>
                                     <div>
-                                        <a href="javascript:;" className="detail-button">Hediye Ürünleri</a>
+                                        <a href="" className="detail-button">Hediye Ürünleri</a>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ class Banner extends React.Component{
                                 <div className="banner-content">
                                     <div>Kırtasiye Kategorisi için Sepette %15 İndirim</div>
                                     <div>
-                                        <a href="javascript:;" className="detail-button">Detaylı Bilgi</a>
+                                        <a href="" className="detail-button">Detaylı Bilgi</a>
                                     </div>
                                 </div>
                             </div>

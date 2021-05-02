@@ -1,4 +1,10 @@
 import React from "react";
+
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {productAction} from './../actions/productAction';
+import {filterAction} from './../actions/filterAction';
+
 import '../assets/scss/filter.scss';
 import categoryIcon from '../assets/img/category-icon.svg';
 
@@ -6,6 +12,22 @@ class Filter extends React.Component{
 
     componentDidMount(){
         
+    }
+
+    setFilter = (filterId) => {
+        this.props.filterAction('SET_ACTIVE_FILTER', filterId);
+        this.props.productAction('LOADING');
+        if(filterId == 0){
+            this.props.productAction('SET_FILTERED_PRODUCTS', this.props.productState.dummyProducts);
+            this.props.productAction('SET_LISTING_PRODUCTS', this.props.productState.dummyProducts);
+        }
+        else{
+            let filteredProducts = this.props.productState.dummyProducts;
+            filteredProducts = filteredProducts.filter((product) => product.category == filterId);
+            console.log('filteredProducts : ', filteredProducts);
+            this.props.productAction('SET_FILTERED_PRODUCTS', filteredProducts);
+            this.props.productAction('SET_LISTING_PRODUCTS', filteredProducts);
+        }
     }
 
     render(){
@@ -18,45 +40,34 @@ class Filter extends React.Component{
                 </div>
                 <div className="row">
                     <div className="col-lg-2">
-                        <a href="#" className="filter-item active">Tüm Kategoriler</a>
+                        <a href="#" onClick={() => this.setFilter(0)} className={`filter-item ${this.props.filterState.activeFilter == 0 ? "active" : ""}`}>Tüm Kategoriler</a>
                     </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Elektronik</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Ev ve Yaşam</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Evcil Hayvan</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Kitap</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Oyuncak</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Spor</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Çiçek (120)</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Hediye</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Moda, Aksesuar</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Ofis, Kırtasiye</a>
-                    </div>
-                    <div className="col-lg-2">
-                        <a href="#" className="filter-item">Parfüm</a>
-                    </div>
+
+                    {this.props.filterState.dummyFilters.map((filter) => {
+                        return(
+                        <div className="col-lg-2">
+                            <a href="#" onClick={() => this.setFilter(filter.id)} className={`filter-item ${this.props.filterState.activeFilter == filter.id ? "active" : ""}`}>{filter.name}</a>
+                        </div>
+                        )
+                    })}
                 </div>
            </div>
         )
     }
 }
 
-export default Filter;
+function mapStateToProps(state){
+    return{
+        productState: state.products,
+        filterState: state.filter
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({
+        filterAction : filterAction,
+        productAction : productAction
+    }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Filter);
